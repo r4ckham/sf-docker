@@ -2,11 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5a4dc7ca-2980-44ad-b98e-5bb1235ec416" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Dockerfile" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docker/.bashrc" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docker/apache.conf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docker/entrypoint.sh" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.env.docker" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/Dockerfile" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -82,7 +80,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1665919465675</updated>
-      <workItem from="1665919467813" duration="21552000" />
+      <workItem from="1665919467813" duration="22456000" />
     </task>
     <servers />
   </component>

@@ -17,7 +17,7 @@ RUN wget https://getcomposer.org/download/2.0.9/composer.phar  \
 COPY docker/.bashrc ~/.bashrc
 COPY docker/apache.conf /etc/apache2/sites-enabled/000-default.conf
 
-RUN git clone https://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@github.com/r4ckham/sf-server.git .
+RUN git clone https://${DOCKER_GIT_TOKEN}@github.com/r4ckham/sf-server.git .
 RUN composer install
 
 COPY . /var/www/
