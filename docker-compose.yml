@@ -1,0 +1,35 @@
+version: '3.9'
+
+services:
+
+  web:
+    container_name: sf-docker-apache
+    build: .
+    volumes:
+      - "./:/var/www:rw"
+    networks: ['networkPod']
+    ports:
+      - "8888:80"
+
+  database:
+    container_name: sf-docker-postres
+    image: postgres:${POSTGRES_VERSION:-14}-alpine
+    ports: [ "5434:5434" ]
+    networks: ['networkPod']
+    expose:
+      - "5434"
+    command: -p 5434
+    environment:
+      POSTGRES_DB_PORT: 5434
+      POSTGRES_DB: ${POSTGRES_DB:-sf_docker}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-passwordTest1234}
+      POSTGRES_USER: ${POSTGRES_USER:-root}
+    volumes:
+      - db-data:/var/lib/postgresql/data:rw
+
+networks:
+  networkPod:
+      name: network-pod
+
+volumes:
+  db-data:
